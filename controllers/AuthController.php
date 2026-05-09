@@ -121,3 +121,4 @@ class AuthController {
         return $password;
     }
 }
+<?php // Feature: auth-improvements branch active ?>
