@@ -1,0 +1,16 @@
+{
+    "name": "pixelverse/studios",
+    "description": "Systeme de Gestion de Personnages - FantasyRealm Online",
+    "type": "project",
+    "require": {
+        "php": ">=7.4",
+        "ext-pdo_mysql": "*",
+        "ext-mongodb": "*",
+        "mongodb/mongodb": "^1.15"
+    },
+    "autoload": {
+        "psr-4": {
+            "PixelVerse\\": "src/"
+        }
+    }
+}

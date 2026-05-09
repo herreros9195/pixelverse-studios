@@ -1,0 +1,36 @@
+// MCD PixelVerse
+digraph {
+	bgcolor=white fontname=Arial rankdir=TB
+	node [fillcolor="#e8f4f8" fontname=Arial shape=box style="rounded,filled"]
+	USER [label="USER
+(id, email, pseudo,
+password_hash, role,
+status, created_at)"]
+	CHARACTER [label="CHARACTER
+(id, user_id, name,
+gender, eye_shape,
+nose_shape, mouth_shape,
+skin_color, hair_color,
+eye_color, status,
+shared, created_at)"]
+	ACCESSORY [label="ACCESSORY
+(id, name, type,
+description, image_url,
+status)"]
+	REVIEW [label="REVIEW
+(id, character_id,
+user_id, rating,
+comment, status)"]
+	CONTACT [label="CONTACT_REQUEST
+(id, email, pseudo,
+message, sent_at)"]
+	CHAR_ACC [label="CHARACTER_
+ACCESSORIES
+(character_id,
+accessory_id)"]
+	USER -> CHARACTER [label="1,N" dir=none]
+	USER -> REVIEW [label="1,N" dir=none]
+	CHARACTER -> REVIEW [label="1,N" dir=none]
+	CHARACTER -> CHAR_ACC [label="1,N" dir=none]
+	ACCESSORY -> CHAR_ACC [label="1,N" dir=none]
+}
