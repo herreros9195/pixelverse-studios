@@ -103,3 +103,4 @@ function setupLivePreview() {
 }
 
 document.addEventListener('DOMContentLoaded', setupLivePreview);
+// Feature: avatar-builder branch active
