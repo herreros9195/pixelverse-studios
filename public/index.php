@@ -1,5 +1,9 @@
 <?php
 ob_start();
+if (getenv('APP_ENV') === 'production') {
+    ini_set('display_errors', '0');
+    error_reporting(E_ALL & ~E_WARNING & ~E_NOTICE);
+}
 /**
  * Point d'entree unique de l'application (Front Controller)
  */
