@@ -39,6 +39,11 @@ class CharacterController {
 
     public static function addReview() {
         requireAuth();
+        if (!verifyCsrf($_POST['csrf_token'] ?? '')) {
+            $_SESSION['flash_error'] = 'Token CSRF invalide.';
+            header('Location: /index.php?action=character-detail&id=' . intval($_POST['character_id'] ?? 0));
+            exit;
+        }
         $characterId = intval($_POST['character_id'] ?? 0);
         $rating = intval($_POST['rating'] ?? 0);
         $comment = htmlspecialchars(trim($_POST['comment'] ?? ''));
@@ -48,7 +53,7 @@ class CharacterController {
         } else {
             Review::create($characterId, $_SESSION['user_id'], $rating, $comment);
             Log::add('review_submitted', ['character_id' => $characterId, 'user_id' => $_SESSION['user_id']]);
-            $_SESSION['flash_success'] = 'Votre avis a été soumis et sera visible après validation.';
+            $_SESSION['flash_success'] = 'Avis soumis. Publication apres validation.';
         }
         header('Location: /index.php?action=character-detail&id=' . $characterId);
         exit;

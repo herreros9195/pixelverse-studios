@@ -1,6 +1,15 @@
 /vendor/
 /node_modules/
 .env
+énoncé.pdf
 *.log
+unity_export_*.log
+*.bak
+*.backup
+logs/sessions/
 .DS_Store
 Thumbs.db
+public/assets/js/*.bak*
+public/assets/js/*.backup-*
+storage/*
+/tools/*

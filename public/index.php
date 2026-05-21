@@ -1,14 +1,14 @@
 <?php
 /**
- * Point d'entrée unique de l'application (Front Controller)
+ * Point d'entree unique de l'application (Front Controller)
  */
 require_once __DIR__ . '/../config/session.php';
 require_once __DIR__ . '/../config/database.php';
+require_once __DIR__ . '/../config/assets.php';
 
 $action = $_GET['action'] ?? 'home';
 
 switch ($action) {
-    // Front
     case 'home':
         require_once __DIR__ . '/../controllers/HomeController.php';
         HomeController::index();
@@ -21,12 +21,15 @@ switch ($action) {
         require_once __DIR__ . '/../controllers/HomeController.php';
         HomeController::legal();
         break;
+    case 'confidentialite':
+        require_once __DIR__ . '/../controllers/HomeController.php';
+        HomeController::privacy();
+        break;
     case 'cgv':
         require_once __DIR__ . '/../controllers/HomeController.php';
         HomeController::cgv();
         break;
 
-    // Auth
     case 'login':
         require_once __DIR__ . '/../controllers/AuthController.php';
         AuthController::login();
@@ -43,8 +46,11 @@ switch ($action) {
         require_once __DIR__ . '/../controllers/AuthController.php';
         AuthController::forgotPassword();
         break;
+    case 'reset-password':
+        require_once __DIR__ . '/../controllers/AuthController.php';
+        AuthController::resetPassword();
+        break;
 
-    // Characters (public)
     case 'characters':
         require_once __DIR__ . '/../controllers/CharacterController.php';
         CharacterController::index();
@@ -58,7 +64,6 @@ switch ($action) {
         CharacterController::addReview();
         break;
 
-    // User space
     case 'dashboard':
         require_once __DIR__ . '/../controllers/UserController.php';
         UserController::dashboard();
@@ -88,7 +93,6 @@ switch ($action) {
         UserController::addAccessory();
         break;
 
-    // Employee space
     case 'employee-dashboard':
         require_once __DIR__ . '/../controllers/EmployeeController.php';
         EmployeeController::dashboard();
@@ -117,8 +121,11 @@ switch ($action) {
         require_once __DIR__ . '/../controllers/EmployeeController.php';
         EmployeeController::suspendUser();
         break;
+    case 'employee-delete-user':
+        require_once __DIR__ . '/../controllers/EmployeeController.php';
+        EmployeeController::deleteUser();
+        break;
 
-    // Admin space
     case 'admin-dashboard':
         require_once __DIR__ . '/../controllers/AdminController.php';
         AdminController::dashboard();
@@ -138,6 +145,6 @@ switch ($action) {
 
     default:
         http_response_code(404);
-        echo "Page non trouvée";
+        echo 'Page non trouvee';
         break;
 }

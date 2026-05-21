@@ -1,158 +1,257 @@
-# PixelVerse Studios - Système de Gestion de Personnages
+# PixelVerse Studios - Plateforme de creation de personnages FantasyRealm
 
-## FantasyRealm Online
-
-Application web de gestion et personnalisation de personnages pour le MMORPG FantasyRealm Online.
+**PixelVerse Studios** est une application web dediee a la creation, la moderation et au partage de personnages pour l'univers `FantasyRealm Online`. La plateforme permet de consulter les personnages publics, de creer de nouveaux profils, de gerer les validations, de publier les personnages approuves et de centraliser les avis.
 
 ## Stack technique
 
-- **Front-end** : HTML5, CSS3, Bootstrap 5, JavaScript
-- **Back-end** : PHP 8+ (natif avec PDO)
-- **Base de données relationnelle** : MySQL / MariaDB
-- **Base de données NoSQL** : MongoDB (logs d'activité)
-- **Déploiement** : Compatible avec tout hébergement PHP/MySQL
+- **Front-end** : HTML5, CSS3, Bootstrap 5, JavaScript natif, Three.js
+- **Back-end** : PHP 7.4+ avec PDO
+- **Base de donnees relationnelle** : MySQL / MariaDB
+- **Base de donnees NoSQL** : MongoDB pour la journalisation des actions
+- **Assets 3D** : `FREE Starter Pack - Sidekick Modular Characters` de Synty Studios
+- **Decor 3D** : `Fantasy Forest Environment - Free Sample`
+- **Deploiement** : compatible avec les hebergeurs PHP classiques et Railway
 
-## Prérequis
+## Prerequis
 
-- PHP >= 7.4 avec extensions `pdo_mysql` et `mongodb`
-- MySQL / MariaDB
-- MongoDB (optionnel, pour les logs)
-- Composer
+- un serveur web Apache ou Nginx avec PHP 7.4+ ;
+- l'extension PHP `pdo_mysql` activee ;
+- l'extension PHP `mongodb` activee si la journalisation NoSQL est utilisee ;
+- MySQL ou MariaDB ;
+- MongoDB ;
+- Git pour le versionnement.
 
-## Installation locale
+---
 
-### 1. Cloner le dépôt
+## 1. Installation en local
+
+### 1.1. Recuperation du projet
+
+Une installation locale type suit les etapes suivantes :
 
 ```bash
-git clone https://github.com/votre-compte/pixelverse-studios.git
+git clone https://github.com/herreros9195/pixelverse-studios.git
 cd pixelverse-studios
 ```
 
-### 2. Installer les dépendances
+### 1.2. Configuration SQL
 
-```bash
-composer install
+1. Ouvrir **phpMyAdmin** ou un client SQL equivalent.
+2. Importer le fichier `database/pixelverse.sql`.
+3. Verifier que la base `pixelverse`, les tables et les donnees de demonstration ont bien ete chargees.
+
+### 1.3. Configuration de la connexion PDO
+
+La configuration relationnelle par defaut se trouve dans `config/database.php`.
+
+Les variables d'environnement usuelles peuvent aussi etre definies ainsi :
+
+```text
+DATABASE_URL=mysql://USER:PASSWORD@HOST:PORT/DBNAME
 ```
 
-### 3. Configurer la base de données MySQL
+### 1.4. Configuration MongoDB
 
-Créer une base de données `pixelverse` puis importer le fichier SQL :
+La configuration NoSQL se trouve dans `config/mongodb.php`.
 
-```bash
-mysql -u root -p pixelverse < database/pixelverse.sql
+Variables possibles :
+
+```text
+MONGODB_URI=mongodb://localhost:27017
 ```
 
-Modifier `config/database.php` avec vos identifiants MySQL.
+### 1.5. Fuseau horaire PHP
 
-### 4. Configurer MongoDB (optionnel)
+Le projet suppose un fuseau `Europe/Paris`. Une configuration locale classique ajoute donc :
 
-Assurez-vous que MongoDB est en cours d'exécution. Modifiez `config/mongodb.php` si nécessaire.
-
-### 5. Configurer le serveur web
-
-Pointer le document root vers le dossier `public/`.
-
-Avec PHP built-in server :
-```bash
-cd public
-php -S localhost:8015
+```ini
+date.timezone = Europe/Paris
 ```
 
-### 6. Accéder à l'application
+Une variable applicative peut aussi etre definie :
 
-Ouvrez votre navigateur à l'adresse `http://localhost:8000`
+```text
+PHP_TIMEZONE=Europe/Paris
+```
 
-## Identifiants de test
+---
 
-| Rôle | Email | Mot de passe |
+## 2. Lancement local
+
+Le lancement local suit en general cette logique :
+
+1. verifier la base SQL ;
+2. verifier la connexion MongoDB si elle est activee ;
+3. lancer le serveur PHP local ;
+4. tester l'accueil, la connexion et la galerie publique.
+
+Commande type :
+
+```bash
+php -S localhost:8017 -t public
+```
+
+Acces principal :
+
+- [http://localhost:8017/index.php?action=home](http://localhost:8017/index.php?action=home)
+
+---
+
+## 3. Workflow Git
+
+### 3.1. Branches
+
+```text
+main        : branche stable
+develop     : branche d'integration
+feature/*   : une branche par fonctionnalite
+```
+
+### 3.2. Cycle de travail type
+
+```bash
+git checkout develop
+git pull origin develop
+git checkout -b feature/nom-fonctionnalite
+
+git add .
+git commit -m "Ajout de la fonctionnalite"
+
+git checkout develop
+git merge feature/nom-fonctionnalite
+git push origin develop
+```
+
+### 3.3. Premier push GitHub
+
+```bash
+git remote add origin https://github.com/herreros9195/pixelverse-studios.git
+git branch -M main
+git push -u origin main
+git push -u origin develop
+git push origin --all
+```
+
+---
+
+## 4. Comptes de demonstration
+
+| Role | Email | Mot de passe |
 |------|-------|--------------|
 | Administrateur | admin@pixelverse.com | Admin@123 |
-| Employé | employee@pixelverse.com | Employee@123 |
-| Utilisateur | user@pixelverse.com | User@123 |
+| Employe | employee@pixelverse.com | Employee@123 |
+| Joueur | user@pixelverse.com | User@123 |
 
-## Structure du projet
+---
 
-```
+## 5. Structure du projet
+
+```text
 pixelverse-studios/
-├── config/           # Configurations BDD et session
-├── controllers/      # Contrôleurs MVC
-├── models/           # Modèles d'accès aux données
-├── views/            # Templates et vues
-├── public/           # Point d'entrée et assets
-│   └── assets/
-│       ├── css/
-│       ├── js/
-│       └── images/
-├── database/         # Fichiers SQL
-├── docs/             # Documentation et livrables
-└── README.md
+|-- config/           # Configuration SQL, MongoDB et options avatar
+|-- controllers/      # Controleurs MVC
+|-- database/         # SQL principal du projet
+|-- docs/             # Documentation de remise
+|-- helpers/          # Services utilitaires
+|-- models/           # Acces donnees et logique metier
+|-- public/           # Point d'entree, assets et vues publiques
+|-- views/            # Vues PHP
+|-- README.md         # Documentation principale
 ```
 
-## Sécurité
+---
 
-- Hashage des mots de passe avec `password_hash()` (bcrypt)
-- Protection CSRF sur tous les formulaires
-- Requêtes préparées PDO contre les injections SQL
-- Sessions sécurisées
-- Validation des entrées utilisateurs
-- Conformité RGPD (gestion des données personnelles)
+## 6. Fonctionnalites principales
 
-## Branches Git
+- page d'accueil publique, page contact, mentions legales, confidentialite et CGV ;
+- authentification complete avec inscription, connexion, deconnexion, mot de passe oublie et reinitialisation ;
+- espace joueur avec creation, edition, duplication, suppression et partage de personnages ;
+- createur 3D modulaire en quatre etapes : identite, apparence, classe, recapitulatif ;
+- galerie publique filtrable et fiche detail avec avis moderes ;
+- espace employe pour la validation des personnages, des avis, des accessoires et des comptes ;
+- espace administrateur pour la creation des comptes employe et la consultation des logs ;
+- viewer 3D Synty sur les ecrans de creation, edition, galerie, detail et tableau de bord ;
+- decor foret sur les apercus corps complet.
 
-- `main` : branche de production
-- `develop` : branche de développement
-- `feature/*` : branches de fonctionnalités
+---
 
-## Système de visualisation des personnages (Avatar Builder)
+## 7. Choix techniques et arbitrages
 
-L'application intègre un **moteur de rendu par couches superposées** permettant de visualiser un personnage en temps réel selon les traits sélectionnés.
+Plusieurs pistes ont ete explorees avant la stabilisation finale :
 
-### Principe de superposition (z-index)
+- `Quaternius` : essais de tenues et d'assemblage, abandonnes a cause de bugs visuels et d'une personnalisation faciale trop limitee ;
+- `Universal LPC` : piste 2D lisible, mais rendu trop eloigne d'un MMORPG heroic fantasy cible ;
+- `version 2D superposee` : solution plus simple techniquement, non retenue pour privilegier une integration 3D complete avec Three.js et WebGL ;
+- `Human Basic Motions FREE` : animation de marche validee dans Unity, mais export web non conserve en raison d'un resultat instable et peu fiable dans le navigateur.
 
-Chaque élément du personnage est rendu dans une couche indépendante, positionnée en `absolute` dans un conteneur relatif de 200×280px. Les couches se superposent selon cet ordre :
+Le perimetre rendu conserve donc :
 
-| Couche | z-index | Type | Description |
-|---|---|---|---|
-| Fond | 0 | CSS | Dégradé bleu ciel |
-| Corps | 10 | Image PNG | Silhouette de base (6 corpulences) |
-| Peau | 15 | Div CSS | Overlay coloré (`background-color` + `opacity: 0.7`) |
-| Cheveux | 30 | Image PNG | Forme au-dessus de la tête (7 couleurs) |
-| Vêtements | 40 | Image PNG | Tunique colorée selon le type de personnage |
-| Armure | 45 | Image PNG | Plastron métallique par-dessus les vêtements |
-| Yeux | 50 | Image PNG | Paire d'yeux avec iris coloré |
-| Nez | 55 | Div CSS | 6 formes géométriques (droit, aquilin, camus...) |
-| Bouche | 56 | Div CSS | 4 formes (fine, moyenne, large, cœur) |
-| Armes | 60 | Image PNG | Épée, hache, arc, dague ou bâton |
-| Icône | 100 | Emoji | Représentation du type (⚔️🔮🏹...) |
+- le createur 3D modulaire Synty ;
+- le decor foret dans les apercus corps complet ;
+- un rendu temps reel stable sans export web final de marche.
 
-### Adaptation à la corpulence
+---
 
-Le système utilise **`transform: scale()`** en CSS pour adapter les vêtements, armures et armes à la taille du corps choisi, évitant ainsi de générer des dizaines d'images :
+## 8. Separation PHP / HTML / JavaScript
 
-| Corpulence | Scale appliqué |
-|---|---|
-| Maigre | ×0.72 |
-| Élancé | ×0.82 |
-| Athlétique | ×0.92 |
-| Musclé | ×1.00 |
-| Trapu | ×1.12 |
-| Gros | ×1.25 |
+Le retour precedent sur les vues serveur a ete pris en compte dans l'organisation du projet :
 
-Les éléments du visage (yeux, nez, bouche, cheveux) sont également décalés verticalement par classe CSS selon la corpulence pour rester alignés avec la tête.
+- les routes, l'authentification, les formulaires et l'hydratation des donnees restent portes par des vues PHP ;
+- le comportement dynamique de l'interface est isole dans des modules JavaScript dedies ;
+- le createur et le viewer 3D sont geres par `public/assets/js/synty-character-builder.js` et `public/assets/js/synty-character-viewer.js` ;
+- les vues clientes jouent principalement le role de structure HTML et de transport des donnees vers le JavaScript via des attributs `data-*`.
 
-### Color picker pour la peau
+Cette organisation conserve un MVC PHP lisible pour l'evaluation, tout en separant davantage le rendu structurel et la logique dynamique du front.
 
-La couleur de peau n'utilise pas d'image mais un **`<input type="color">`** qui applique directement une couleur hexadécimale au div overlay. Cette valeur est stockée en base de données (ex: `#f5d0a9`).
+---
 
-### Remplacer les images placeholder
+## 9. Securite
 
-Les images générées automatiquement se trouvent dans `public/assets/images/avatar/`. Pour les remplacer par de vraies illustrations :
+- hashage des mots de passe avec `password_hash()` ;
+- requetes preparees PDO contre les injections SQL ;
+- tokens CSRF sur les actions sensibles ;
+- echappement HTML avec `htmlspecialchars()` ;
+- controle de role sur les espaces proteges ;
+- lien de reinitialisation de mot de passe avec token et expiration ;
+- journalisation MongoDB des actions metier et administratives.
 
-1. Conservez les **mêmes noms de fichiers** (ex: `body/muscle.png`, `clothes/guerrier.png`)
-2. Respectez les dimensions **200×280px** avec fond transparent (PNG)
-3. Dessinez à l'échelle **"Musclé"** (scale 1.0) — le CSS adapte les autres tailles
-4. Videz le cache du navigateur (Ctrl+F5)
+---
 
-## Auteur
+## 10. Documentation disponible
 
-Projet réalisé dans le cadre de l'ECF TP Développeur Web et Web Mobile.
+Le dossier `docs/` contient :
+
+- `charte_graphique.pdf`
+- `manuel_utilisation.pdf`
+- `documentation_technique.md` et `documentation_technique.pdf`
+- `gestion_projet.md` et `gestion_projet.pdf`
+- `diagramme_mcd.png`
+- `diagramme_utilisation.png`
+- `diagramme_sequence.png`
+- `maquettes/`
+- `GUIDE_DEPLOIEMENT_RAILWAY.md`
+
+---
+
+## 11. Verification locale conseillee
+
+- `php -l` sur les fichiers PHP modifies ;
+- ouverture des routes publiques principales ;
+- creation d'un personnage, validation employe puis partage ;
+- verification du viewer 3D sur creation, detail et galerie ;
+- test du mot de passe oublie et du renouvellement ;
+- controle des comptes de demonstration.
+
+---
+
+## 12. Elements a renseigner hors depot
+
+- URL GitHub publique
+- URL de l'application deployee
+- URL publique du board Trello
+
+Les cartes de synthese `Sprint 0` a `Sprint 9` du JSON Trello de livraison sont harmonisees avec une date de fin au `21 mai 2026`.
+
+## 13. Auteur
+
+Projet realise dans le cadre d'une evaluation DWWM.

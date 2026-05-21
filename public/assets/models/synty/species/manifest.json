@@ -1,0 +1,12 @@
+{
+  "engine": "synty-human-species",
+  "version": "v31-human-species",
+  "baseUrl": "assets/models/",
+  "species": [
+    { "id": "humanspecies_01", "name": "humanspecies_01", "url": "synty/species/humanspecies_01.glb", "source": "Assets/Synty/SidekickCharacters/Characters/HumanSpecies/HumanSpecies_01/HumanSpecies_01.prefab" },
+    { "id": "humanspecies_02", "name": "humanspecies_02", "url": "synty/species/humanspecies_02.glb", "source": "Assets/Synty/SidekickCharacters/Characters/HumanSpecies/HumanSpecies_02/HumanSpecies_02.prefab" },
+    { "id": "female_muscular_02", "name": "female_muscular_02", "url": "synty/presets/female_muscular_02.glb", "source": "Assets/PixelVerseExports/SyntyPresets/female_muscular_02/female_muscular_02.prefab" },
+    { "id": "humanspecies_03", "name": "humanspecies_03", "url": "synty/species/humanspecies_03.glb", "source": "Assets/Synty/SidekickCharacters/Characters/HumanSpecies/HumanSpecies_03/HumanSpecies_03.prefab" },
+    { "id": "humanspecies_04", "name": "humanspecies_04", "url": "synty/species/humanspecies_04.glb", "source": "Assets/Synty/SidekickCharacters/Characters/HumanSpecies/HumanSpecies_04/HumanSpecies_04.prefab" }
+  ]
+}

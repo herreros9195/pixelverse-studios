@@ -1,56 +1,87 @@
 <?php require __DIR__ . '/../layouts/header.php'; ?>
 
-<h1>Espace Administrateur</h1>
+<section class="page-intro">
+    <div>
+        <p class="eyebrow">Administration</p>
+        <h1 class="page-title">Espace administrateur</h1>
+        <p class="page-copy">Supervisez les comptes, les employes et les operations sensibles de la plateforme.</p>
+    </div>
+</section>
 
-<div class="row mt-4">
-    <div class="col-md-4">
-        <div class="card text-white bg-primary mb-3">
+<div class="row g-4 mb-4">
+    <div class="col-lg-4">
+        <div class="card shadow-sm h-100">
             <div class="card-body">
-                <h5 class="card-title">Utilisateurs</h5>
-                <p class="card-text display-6"><?= count($users) ?></p>
+                <p class="eyebrow mb-2">Vue globale</p>
+                <h2 class="h5">Utilisateurs en base</h2>
+                <p class="display-5 mb-0"><?= count($users) ?></p>
             </div>
         </div>
     </div>
-    <div class="col-md-4">
-        <a href="/index.php?action=admin-create-employee" class="btn btn-success w-100 mb-3">+ Créer un compte employé</a>
-        <a href="/index.php?action=admin-logs" class="btn btn-info w-100 text-white">Voir les logs</a>
+    <div class="col-lg-8">
+        <div class="card shadow-sm h-100">
+            <div class="card-body d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+                <div>
+                    <h2 class="h5 mb-1">Actions rapides</h2>
+                    <p class="text-muted mb-0">Creez un compte employe ou consultez les journaux d'activite.</p>
+                </div>
+                <div class="d-flex flex-wrap gap-2">
+                    <a href="/index.php?action=admin-create-employee" class="btn btn-success">Creer un compte employe</a>
+                    <a href="/index.php?action=admin-logs" class="btn btn-outline-primary">Voir les logs</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<h3 class="mt-4">Gestion des comptes</h3>
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Pseudo</th>
-            <th>Email</th>
-            <th>Rôle</th>
-            <th>Statut</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php foreach ($users as $u): ?>
-            <tr>
-                <td><?= $u['id'] ?></td>
-                <td><?= htmlspecialchars($u['pseudo']) ?></td>
-                <td><?= htmlspecialchars($u['email']) ?></td>
-                <td><?= ucfirst($u['role']) ?></td>
-                <td><span class="badge bg-<?= $u['status'] === 'active' ? 'success' : 'danger' ?>"><?= ucfirst($u['status']) ?></span></td>
-                <td>
-                    <?php if ($u['role'] === 'employee'): ?>
-                        <a href="/index.php?action=admin-manage-employee&id=<?= $u['id'] ?>&type=password" class="btn btn-sm btn-outline-primary" onclick="return confirm('Générer un nouveau mot de passe ?')">MDP</a>
-                        <?php if ($u['status'] === 'active'): ?>
-                            <a href="/index.php?action=admin-manage-employee&id=<?= $u['id'] ?>&type=suspend" class="btn btn-sm btn-outline-warning">Suspendre</a>
-                        <?php else: ?>
-                            <a href="/index.php?action=admin-manage-employee&id=<?= $u['id'] ?>&type=activate" class="btn btn-sm btn-outline-success">Activer</a>
-                        <?php endif; ?>
-                        <a href="/index.php?action=admin-manage-employee&id=<?= $u['id'] ?>&type=delete" class="btn btn-sm btn-outline-danger" onclick="return confirm('Supprimer définitivement ?')">Supprimer</a>
-                    <?php endif; ?>
-                </td>
-            </tr>
-        <?php endforeach; ?>
-    </tbody>
-</table>
+<div class="card shadow-sm">
+    <div class="card-body">
+        <h2 class="h5 mb-3">Gestion des comptes</h2>
+        <div class="table-responsive">
+            <table class="table align-middle">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Pseudo</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Statut</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($users as $u): ?>
+                        <tr>
+                            <td><?= (int) $u['id'] ?></td>
+                            <td><?= htmlspecialchars($u['pseudo']) ?></td>
+                            <td><?= htmlspecialchars($u['email']) ?></td>
+                            <td><?= htmlspecialchars(ucfirst($u['role'])) ?></td>
+                            <td>
+                                <span class="badge bg-<?= $u['status'] === 'active' ? 'success' : 'danger' ?>">
+                                    <?= htmlspecialchars(ucfirst($u['status'])) ?>
+                                </span>
+                            </td>
+                            <td>
+                                <?php if ($u['role'] === 'employee'): ?>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <a href="/index.php?action=admin-manage-employee&id=<?= (int) $u['id'] ?>&type=password&csrf=<?= urlencode(csrfToken()) ?>" class="btn btn-sm btn-outline-primary" onclick="return confirm('Generer un nouveau mot de passe ?')">Mot de passe</a>
+                                        <?php if ($u['status'] === 'active'): ?>
+                                            <a href="/index.php?action=admin-manage-employee&id=<?= (int) $u['id'] ?>&type=suspend&csrf=<?= urlencode(csrfToken()) ?>" class="btn btn-sm btn-outline-warning">Suspendre</a>
+                                        <?php else: ?>
+                                            <a href="/index.php?action=admin-manage-employee&id=<?= (int) $u['id'] ?>&type=activate&csrf=<?= urlencode(csrfToken()) ?>" class="btn btn-sm btn-outline-success">Activer</a>
+                                        <?php endif; ?>
+                                        <a href="/index.php?action=admin-manage-employee&id=<?= (int) $u['id'] ?>&type=delete&csrf=<?= urlencode(csrfToken()) ?>" class="btn btn-sm btn-outline-danger" onclick="return confirm('Supprimer definitivement ce compte ?')">Supprimer</a>
+                                    </div>
+                                <?php else: ?>
+                                    <span class="text-muted small">Aucune action admin directe</span>
+                                <?php endif; ?>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 
 <?php require __DIR__ . '/../layouts/footer.php'; ?>

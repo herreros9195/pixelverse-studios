@@ -1,0 +1,978 @@
+﻿{
+    "engine":  "synty-modular",
+    "version":  "v30-modular-with-accessories",
+    "generatedAt":  "2026-05-19 14:59:47",
+    "baseUrl":  "assets/models/",
+    "parts":  {
+                  "accessories":  [
+                                      {
+                                          "id":  "sk_fant_kngt_17_22ahed_hu01",
+                                          "name":  "sk_fant_kngt_17_22ahed_hu01",
+                                          "url":  "synty/modular/accessories/sk_fant_kngt_17_22ahed_hu01.glb",
+                                          "category":  "accessories"
+                                      },
+                                      {
+                                          "id":  "sk_fant_kngt_17_24abac_hu01",
+                                          "name":  "sk_fant_kngt_17_24abac_hu01",
+                                          "url":  "synty/modular/accessories/sk_fant_kngt_17_24abac_hu01.glb",
+                                          "category":  "accessories"
+                                      },
+                                      {
+                                          "id":  "sk_fant_kngt_17_25ahpf_hu01",
+                                          "name":  "sk_fant_kngt_17_25ahpf_hu01",
+                                          "url":  "synty/modular/accessories/sk_fant_kngt_17_25ahpf_hu01.glb",
+                                          "category":  "accessories"
+                                      },
+                                      {
+                                          "id":  "sk_fant_kngt_17_26ahpb_hu01",
+                                          "name":  "sk_fant_kngt_17_26ahpb_hu01",
+                                          "url":  "synty/modular/accessories/sk_fant_kngt_17_26ahpb_hu01.glb",
+                                          "category":  "accessories"
+                                      },
+                                      {
+                                          "id":  "sk_fant_kngt_17_27ahpl_hu01",
+                                          "name":  "sk_fant_kngt_17_27ahpl_hu01",
+                                          "url":  "synty/modular/accessories/sk_fant_kngt_17_27ahpl_hu01.glb",
+                                          "category":  "accessories"
+                                      },
+                                      {
+                                          "id":  "sk_fant_kngt_17_28ahpr_hu01",
+                                          "name":  "sk_fant_kngt_17_28ahpr_hu01",
+                                          "url":  "synty/modular/accessories/sk_fant_kngt_17_28ahpr_hu01.glb",
+                                          "category":  "accessories"
+                                      },
+                                      {
+                                          "id":  "sk_fant_kngt_17_29ashl_hu01",
+                                          "name":  "sk_fant_kngt_17_29ashl_hu01",
+                                          "url":  "synty/modular/accessories/sk_fant_kngt_17_29ashl_hu01.glb",
+                                          "category":  "accessories"
+                                      },
+                                      {
+                                          "id":  "sk_fant_kngt_17_30ashr_hu01",
+                                          "name":  "sk_fant_kngt_17_30ashr_hu01",
+                                          "url":  "synty/modular/accessories/sk_fant_kngt_17_30ashr_hu01.glb",
+                                          "category":  "accessories"
+                                      },
+                                      {
+                                          "id":  "sk_fant_kngt_17_31aebl_hu01",
+                                          "name":  "sk_fant_kngt_17_31aebl_hu01",
+                                          "url":  "synty/modular/accessories/sk_fant_kngt_17_31aebl_hu01.glb",
+                                          "category":  "accessories"
+                                      },
+                                      {
+                                          "id":  "sk_fant_kngt_17_32aebr_hu01",
+                                          "name":  "sk_fant_kngt_17_32aebr_hu01",
+                                          "url":  "synty/modular/accessories/sk_fant_kngt_17_32aebr_hu01.glb",
+                                          "category":  "accessories"
+                                      },
+                                      {
+                                          "id":  "sk_fant_kngt_17_33aknl_hu01",
+                                          "name":  "sk_fant_kngt_17_33aknl_hu01",
+                                          "url":  "synty/modular/accessories/sk_fant_kngt_17_33aknl_hu01.glb",
+                                          "category":  "accessories"
+                                      },
+                                      {
+                                          "id":  "sk_fant_kngt_17_34aknr_hu01",
+                                          "name":  "sk_fant_kngt_17_34aknr_hu01",
+                                          "url":  "synty/modular/accessories/sk_fant_kngt_17_34aknr_hu01.glb",
+                                          "category":  "accessories"
+                                      },
+                                      {
+                                          "id":  "sk_horr_viln_01_22ahed_hu01",
+                                          "name":  "sk_horr_viln_01_22ahed_hu01",
+                                          "url":  "synty/modular/accessories/sk_horr_viln_01_22ahed_hu01.glb",
+                                          "category":  "accessories"
+                                      },
+                                      {
+                                          "id":  "sk_scfi_civl_09_22ahed_hu01",
+                                          "name":  "sk_scfi_civl_09_22ahed_hu01",
+                                          "url":  "synty/modular/accessories/sk_scfi_civl_09_22ahed_hu01.glb",
+                                          "category":  "accessories"
+                                      },
+                                      {
+                                          "id":  "sk_scfi_civl_09_24abac_hu01",
+                                          "name":  "sk_scfi_civl_09_24abac_hu01",
+                                          "url":  "synty/modular/accessories/sk_scfi_civl_09_24abac_hu01.glb",
+                                          "category":  "accessories"
+                                      },
+                                      {
+                                          "id":  "sk_scfi_civl_09_25ahpf_hu01",
+                                          "name":  "sk_scfi_civl_09_25ahpf_hu01",
+                                          "url":  "synty/modular/accessories/sk_scfi_civl_09_25ahpf_hu01.glb",
+                                          "category":  "accessories"
+                                      },
+                                      {
+                                          "id":  "sk_scfi_civl_09_26ahpb_hu01",
+                                          "name":  "sk_scfi_civl_09_26ahpb_hu01",
+                                          "url":  "synty/modular/accessories/sk_scfi_civl_09_26ahpb_hu01.glb",
+                                          "category":  "accessories"
+                                      },
+                                      {
+                                          "id":  "sk_scfi_civl_09_27ahpl_hu01",
+                                          "name":  "sk_scfi_civl_09_27ahpl_hu01",
+                                          "url":  "synty/modular/accessories/sk_scfi_civl_09_27ahpl_hu01.glb",
+                                          "category":  "accessories"
+                                      },
+                                      {
+                                          "id":  "sk_scfi_civl_09_28ahpr_hu01",
+                                          "name":  "sk_scfi_civl_09_28ahpr_hu01",
+                                          "url":  "synty/modular/accessories/sk_scfi_civl_09_28ahpr_hu01.glb",
+                                          "category":  "accessories"
+                                      },
+                                      {
+                                          "id":  "sk_scfi_civl_09_29ashl_hu01",
+                                          "name":  "sk_scfi_civl_09_29ashl_hu01",
+                                          "url":  "synty/modular/accessories/sk_scfi_civl_09_29ashl_hu01.glb",
+                                          "category":  "accessories"
+                                      },
+                                      {
+                                          "id":  "sk_scfi_civl_09_30ashr_hu01",
+                                          "name":  "sk_scfi_civl_09_30ashr_hu01",
+                                          "url":  "synty/modular/accessories/sk_scfi_civl_09_30ashr_hu01.glb",
+                                          "category":  "accessories"
+                                      },
+                                      {
+                                          "id":  "sk_scfi_civl_09_31aebl_hu01",
+                                          "name":  "sk_scfi_civl_09_31aebl_hu01",
+                                          "url":  "synty/modular/accessories/sk_scfi_civl_09_31aebl_hu01.glb",
+                                          "category":  "accessories"
+                                      },
+                                      {
+                                          "id":  "sk_scfi_civl_09_32aebr_hu01",
+                                          "name":  "sk_scfi_civl_09_32aebr_hu01",
+                                          "url":  "synty/modular/accessories/sk_scfi_civl_09_32aebr_hu01.glb",
+                                          "category":  "accessories"
+                                      },
+                                      {
+                                          "id":  "sk_scfi_civl_09_33aknl_hu01",
+                                          "name":  "sk_scfi_civl_09_33aknl_hu01",
+                                          "url":  "synty/modular/accessories/sk_scfi_civl_09_33aknl_hu01.glb",
+                                          "category":  "accessories"
+                                      },
+                                      {
+                                          "id":  "sk_scfi_civl_09_34aknr_hu01",
+                                          "name":  "sk_scfi_civl_09_34aknr_hu01",
+                                          "url":  "synty/modular/accessories/sk_scfi_civl_09_34aknr_hu01.glb",
+                                          "category":  "accessories"
+                                      },
+                                      {
+                                          "id":  "sk_scfi_civl_10_22ahed_hu01",
+                                          "name":  "sk_scfi_civl_10_22ahed_hu01",
+                                          "url":  "synty/modular/accessories/sk_scfi_civl_10_22ahed_hu01.glb",
+                                          "category":  "accessories"
+                                      },
+                                      {
+                                          "id":  "sk_scfi_civl_10_26ahpb_hu01",
+                                          "name":  "sk_scfi_civl_10_26ahpb_hu01",
+                                          "url":  "synty/modular/accessories/sk_scfi_civl_10_26ahpb_hu01.glb",
+                                          "category":  "accessories"
+                                      },
+                                      {
+                                          "id":  "sk_scfi_civl_10_27ahpl_hu01",
+                                          "name":  "sk_scfi_civl_10_27ahpl_hu01",
+                                          "url":  "synty/modular/accessories/sk_scfi_civl_10_27ahpl_hu01.glb",
+                                          "category":  "accessories"
+                                      },
+                                      {
+                                          "id":  "sk_scfi_civl_10_28ahpr_hu01",
+                                          "name":  "sk_scfi_civl_10_28ahpr_hu01",
+                                          "url":  "synty/modular/accessories/sk_scfi_civl_10_28ahpr_hu01.glb",
+                                          "category":  "accessories"
+                                      },
+                                      {
+                                          "id":  "sk_scfi_civl_10_29ashl_hu01",
+                                          "name":  "sk_scfi_civl_10_29ashl_hu01",
+                                          "url":  "synty/modular/accessories/sk_scfi_civl_10_29ashl_hu01.glb",
+                                          "category":  "accessories"
+                                      },
+                                      {
+                                          "id":  "sk_scfi_civl_10_30ashr_hu01",
+                                          "name":  "sk_scfi_civl_10_30ashr_hu01",
+                                          "url":  "synty/modular/accessories/sk_scfi_civl_10_30ashr_hu01.glb",
+                                          "category":  "accessories"
+                                      }
+                                  ],
+                  "ears":  [
+                               {
+                                   "id":  "sk_humn_base_01_07earl_hu01",
+                                   "name":  "sk_humn_base_01_07earl_hu01",
+                                   "url":  "synty/modular/ears/sk_humn_base_01_07earl_hu01.glb",
+                                   "category":  "ears"
+                               },
+                               {
+                                   "id":  "sk_humn_base_01_08earr_hu01",
+                                   "name":  "sk_humn_base_01_08earr_hu01",
+                                   "url":  "synty/modular/ears/sk_humn_base_01_08earr_hu01.glb",
+                                   "category":  "ears"
+                               },
+                               {
+                                   "id":  "sk_humn_base_02_07earl_hu01",
+                                   "name":  "sk_humn_base_02_07earl_hu01",
+                                   "url":  "synty/modular/ears/sk_humn_base_02_07earl_hu01.glb",
+                                   "category":  "ears"
+                               },
+                               {
+                                   "id":  "sk_humn_base_02_08earr_hu01",
+                                   "name":  "sk_humn_base_02_08earr_hu01",
+                                   "url":  "synty/modular/ears/sk_humn_base_02_08earr_hu01.glb",
+                                   "category":  "ears"
+                               },
+                               {
+                                   "id":  "sk_humn_base_03_07earl_hu01",
+                                   "name":  "sk_humn_base_03_07earl_hu01",
+                                   "url":  "synty/modular/ears/sk_humn_base_03_07earl_hu01.glb",
+                                   "category":  "ears"
+                               },
+                               {
+                                   "id":  "sk_humn_base_03_08earr_hu01",
+                                   "name":  "sk_humn_base_03_08earr_hu01",
+                                   "url":  "synty/modular/ears/sk_humn_base_03_08earr_hu01.glb",
+                                   "category":  "ears"
+                               },
+                               {
+                                   "id":  "sk_humn_base_04_07earl_hu01",
+                                   "name":  "sk_humn_base_04_07earl_hu01",
+                                   "url":  "synty/modular/ears/sk_humn_base_04_07earl_hu01.glb",
+                                   "category":  "ears"
+                               },
+                               {
+                                   "id":  "sk_humn_base_04_08earr_hu01",
+                                   "name":  "sk_humn_base_04_08earr_hu01",
+                                   "url":  "synty/modular/ears/sk_humn_base_04_08earr_hu01.glb",
+                                   "category":  "ears"
+                               },
+                               {
+                                   "id":  "sk_humn_base_05_07earl_hu01",
+                                   "name":  "sk_humn_base_05_07earl_hu01",
+                                   "url":  "synty/modular/ears/sk_humn_base_05_07earl_hu01.glb",
+                                   "category":  "ears"
+                               },
+                               {
+                                   "id":  "sk_humn_base_05_08earr_hu01",
+                                   "name":  "sk_humn_base_05_08earr_hu01",
+                                   "url":  "synty/modular/ears/sk_humn_base_05_08earr_hu01.glb",
+                                   "category":  "ears"
+                               },
+                               {
+                                   "id":  "sk_humn_base_06_07earl_hu01",
+                                   "name":  "sk_humn_base_06_07earl_hu01",
+                                   "url":  "synty/modular/ears/sk_humn_base_06_07earl_hu01.glb",
+                                   "category":  "ears"
+                               },
+                               {
+                                   "id":  "sk_humn_base_06_08earr_hu01",
+                                   "name":  "sk_humn_base_06_08earr_hu01",
+                                   "url":  "synty/modular/ears/sk_humn_base_06_08earr_hu01.glb",
+                                   "category":  "ears"
+                               },
+                               {
+                                   "id":  "sk_humn_base_07_07earl_hu01",
+                                   "name":  "sk_humn_base_07_07earl_hu01",
+                                   "url":  "synty/modular/ears/sk_humn_base_07_07earl_hu01.glb",
+                                   "category":  "ears"
+                               },
+                               {
+                                   "id":  "sk_humn_base_07_08earr_hu01",
+                                   "name":  "sk_humn_base_07_08earr_hu01",
+                                   "url":  "synty/modular/ears/sk_humn_base_07_08earr_hu01.glb",
+                                   "category":  "ears"
+                               },
+                               {
+                                   "id":  "sk_humn_base_08_07earl_hu01",
+                                   "name":  "sk_humn_base_08_07earl_hu01",
+                                   "url":  "synty/modular/ears/sk_humn_base_08_07earl_hu01.glb",
+                                   "category":  "ears"
+                               },
+                               {
+                                   "id":  "sk_humn_base_08_08earr_hu01",
+                                   "name":  "sk_humn_base_08_08earr_hu01",
+                                   "url":  "synty/modular/ears/sk_humn_base_08_08earr_hu01.glb",
+                                   "category":  "ears"
+                               },
+                               {
+                                   "id":  "sk_humn_base_09_07earl_hu01",
+                                   "name":  "sk_humn_base_09_07earl_hu01",
+                                   "url":  "synty/modular/ears/sk_humn_base_09_07earl_hu01.glb",
+                                   "category":  "ears"
+                               },
+                               {
+                                   "id":  "sk_humn_base_09_08earr_hu01",
+                                   "name":  "sk_humn_base_09_08earr_hu01",
+                                   "url":  "synty/modular/ears/sk_humn_base_09_08earr_hu01.glb",
+                                   "category":  "ears"
+                               },
+                               {
+                                   "id":  "sk_humn_base_10_07earl_hu01",
+                                   "name":  "sk_humn_base_10_07earl_hu01",
+                                   "url":  "synty/modular/ears/sk_humn_base_10_07earl_hu01.glb",
+                                   "category":  "ears"
+                               },
+                               {
+                                   "id":  "sk_humn_base_10_08earr_hu01",
+                                   "name":  "sk_humn_base_10_08earr_hu01",
+                                   "url":  "synty/modular/ears/sk_humn_base_10_08earr_hu01.glb",
+                                   "category":  "ears"
+                               }
+                           ],
+                  "eyebrows":  [
+                                   {
+                                       "id":  "sk_humn_base_01_03ebrl_hu01",
+                                       "name":  "sk_humn_base_01_03ebrl_hu01",
+                                       "url":  "synty/modular/eyebrows/sk_humn_base_01_03ebrl_hu01.glb",
+                                       "category":  "eyebrows"
+                                   },
+                                   {
+                                       "id":  "sk_humn_base_01_04ebrr_hu01",
+                                       "name":  "sk_humn_base_01_04ebrr_hu01",
+                                       "url":  "synty/modular/eyebrows/sk_humn_base_01_04ebrr_hu01.glb",
+                                       "category":  "eyebrows"
+                                   },
+                                   {
+                                       "id":  "sk_humn_base_02_03ebrl_hu01",
+                                       "name":  "sk_humn_base_02_03ebrl_hu01",
+                                       "url":  "synty/modular/eyebrows/sk_humn_base_02_03ebrl_hu01.glb",
+                                       "category":  "eyebrows"
+                                   },
+                                   {
+                                       "id":  "sk_humn_base_02_04ebrr_hu01",
+                                       "name":  "sk_humn_base_02_04ebrr_hu01",
+                                       "url":  "synty/modular/eyebrows/sk_humn_base_02_04ebrr_hu01.glb",
+                                       "category":  "eyebrows"
+                                   },
+                                   {
+                                       "id":  "sk_humn_base_03_03ebrl_hu01",
+                                       "name":  "sk_humn_base_03_03ebrl_hu01",
+                                       "url":  "synty/modular/eyebrows/sk_humn_base_03_03ebrl_hu01.glb",
+                                       "category":  "eyebrows"
+                                   },
+                                   {
+                                       "id":  "sk_humn_base_03_04ebrr_hu01",
+                                       "name":  "sk_humn_base_03_04ebrr_hu01",
+                                       "url":  "synty/modular/eyebrows/sk_humn_base_03_04ebrr_hu01.glb",
+                                       "category":  "eyebrows"
+                                   },
+                                   {
+                                       "id":  "sk_humn_base_04_03ebrl_hu01",
+                                       "name":  "sk_humn_base_04_03ebrl_hu01",
+                                       "url":  "synty/modular/eyebrows/sk_humn_base_04_03ebrl_hu01.glb",
+                                       "category":  "eyebrows"
+                                   },
+                                   {
+                                       "id":  "sk_humn_base_04_04ebrr_hu01",
+                                       "name":  "sk_humn_base_04_04ebrr_hu01",
+                                       "url":  "synty/modular/eyebrows/sk_humn_base_04_04ebrr_hu01.glb",
+                                       "category":  "eyebrows"
+                                   },
+                                   {
+                                       "id":  "sk_humn_base_05_03ebrl_hu01",
+                                       "name":  "sk_humn_base_05_03ebrl_hu01",
+                                       "url":  "synty/modular/eyebrows/sk_humn_base_05_03ebrl_hu01.glb",
+                                       "category":  "eyebrows"
+                                   },
+                                   {
+                                       "id":  "sk_humn_base_05_04ebrr_hu01",
+                                       "name":  "sk_humn_base_05_04ebrr_hu01",
+                                       "url":  "synty/modular/eyebrows/sk_humn_base_05_04ebrr_hu01.glb",
+                                       "category":  "eyebrows"
+                                   },
+                                   {
+                                       "id":  "sk_humn_base_06_03ebrl_hu01",
+                                       "name":  "sk_humn_base_06_03ebrl_hu01",
+                                       "url":  "synty/modular/eyebrows/sk_humn_base_06_03ebrl_hu01.glb",
+                                       "category":  "eyebrows"
+                                   },
+                                   {
+                                       "id":  "sk_humn_base_06_04ebrr_hu01",
+                                       "name":  "sk_humn_base_06_04ebrr_hu01",
+                                       "url":  "synty/modular/eyebrows/sk_humn_base_06_04ebrr_hu01.glb",
+                                       "category":  "eyebrows"
+                                   },
+                                   {
+                                       "id":  "sk_humn_base_07_03ebrl_hu01",
+                                       "name":  "sk_humn_base_07_03ebrl_hu01",
+                                       "url":  "synty/modular/eyebrows/sk_humn_base_07_03ebrl_hu01.glb",
+                                       "category":  "eyebrows"
+                                   },
+                                   {
+                                       "id":  "sk_humn_base_07_04ebrr_hu01",
+                                       "name":  "sk_humn_base_07_04ebrr_hu01",
+                                       "url":  "synty/modular/eyebrows/sk_humn_base_07_04ebrr_hu01.glb",
+                                       "category":  "eyebrows"
+                                   },
+                                   {
+                                       "id":  "sk_humn_base_08_03ebrl_hu01",
+                                       "name":  "sk_humn_base_08_03ebrl_hu01",
+                                       "url":  "synty/modular/eyebrows/sk_humn_base_08_03ebrl_hu01.glb",
+                                       "category":  "eyebrows"
+                                   },
+                                   {
+                                       "id":  "sk_humn_base_08_04ebrr_hu01",
+                                       "name":  "sk_humn_base_08_04ebrr_hu01",
+                                       "url":  "synty/modular/eyebrows/sk_humn_base_08_04ebrr_hu01.glb",
+                                       "category":  "eyebrows"
+                                   },
+                                   {
+                                       "id":  "sk_humn_base_09_03ebrl_hu01",
+                                       "name":  "sk_humn_base_09_03ebrl_hu01",
+                                       "url":  "synty/modular/eyebrows/sk_humn_base_09_03ebrl_hu01.glb",
+                                       "category":  "eyebrows"
+                                   },
+                                   {
+                                       "id":  "sk_humn_base_09_04ebrr_hu01",
+                                       "name":  "sk_humn_base_09_04ebrr_hu01",
+                                       "url":  "synty/modular/eyebrows/sk_humn_base_09_04ebrr_hu01.glb",
+                                       "category":  "eyebrows"
+                                   },
+                                   {
+                                       "id":  "sk_humn_base_10_03ebrl_hu01",
+                                       "name":  "sk_humn_base_10_03ebrl_hu01",
+                                       "url":  "synty/modular/eyebrows/sk_humn_base_10_03ebrl_hu01.glb",
+                                       "category":  "eyebrows"
+                                   },
+                                   {
+                                       "id":  "sk_humn_base_10_04ebrr_hu01",
+                                       "name":  "sk_humn_base_10_04ebrr_hu01",
+                                       "url":  "synty/modular/eyebrows/sk_humn_base_10_04ebrr_hu01.glb",
+                                       "category":  "eyebrows"
+                                   }
+                               ],
+                  "eyes":  [
+                               {
+                                   "id":  "sk_humn_base_01_05eyel_hu01",
+                                   "name":  "sk_humn_base_01_05eyel_hu01",
+                                   "url":  "synty/modular/eyes/sk_humn_base_01_05eyel_hu01.glb",
+                                   "category":  "eyes"
+                               },
+                               {
+                                   "id":  "sk_humn_base_01_06eyer_hu01",
+                                   "name":  "sk_humn_base_01_06eyer_hu01",
+                                   "url":  "synty/modular/eyes/sk_humn_base_01_06eyer_hu01.glb",
+                                   "category":  "eyes"
+                               }
+                           ],
+                  "faces":  [
+                                {
+                                    "id":  "sk_fant_kngt_17_23afac_hu01",
+                                    "name":  "sk_fant_kngt_17_23afac_hu01",
+                                    "url":  "synty/modular/faces/sk_fant_kngt_17_23afac_hu01.glb",
+                                    "category":  "faces"
+                                },
+                                {
+                                    "id":  "sk_humn_base_01_09fchr_hu01",
+                                    "name":  "sk_humn_base_01_09fchr_hu01",
+                                    "url":  "synty/modular/faces/sk_humn_base_01_09fchr_hu01.glb",
+                                    "category":  "faces"
+                                },
+                                {
+                                    "id":  "sk_humn_base_02_09fchr_hu01",
+                                    "name":  "sk_humn_base_02_09fchr_hu01",
+                                    "url":  "synty/modular/faces/sk_humn_base_02_09fchr_hu01.glb",
+                                    "category":  "faces"
+                                },
+                                {
+                                    "id":  "sk_humn_base_03_09fchr_hu01",
+                                    "name":  "sk_humn_base_03_09fchr_hu01",
+                                    "url":  "synty/modular/faces/sk_humn_base_03_09fchr_hu01.glb",
+                                    "category":  "faces"
+                                },
+                                {
+                                    "id":  "sk_humn_base_04_09fchr_hu01",
+                                    "name":  "sk_humn_base_04_09fchr_hu01",
+                                    "url":  "synty/modular/faces/sk_humn_base_04_09fchr_hu01.glb",
+                                    "category":  "faces"
+                                },
+                                {
+                                    "id":  "sk_humn_base_05_09fchr_hu01",
+                                    "name":  "sk_humn_base_05_09fchr_hu01",
+                                    "url":  "synty/modular/faces/sk_humn_base_05_09fchr_hu01.glb",
+                                    "category":  "faces"
+                                },
+                                {
+                                    "id":  "sk_humn_base_06_09fchr_hu01",
+                                    "name":  "sk_humn_base_06_09fchr_hu01",
+                                    "url":  "synty/modular/faces/sk_humn_base_06_09fchr_hu01.glb",
+                                    "category":  "faces"
+                                },
+                                {
+                                    "id":  "sk_humn_base_07_09fchr_hu01",
+                                    "name":  "sk_humn_base_07_09fchr_hu01",
+                                    "url":  "synty/modular/faces/sk_humn_base_07_09fchr_hu01.glb",
+                                    "category":  "faces"
+                                },
+                                {
+                                    "id":  "sk_humn_base_08_09fchr_hu01",
+                                    "name":  "sk_humn_base_08_09fchr_hu01",
+                                    "url":  "synty/modular/faces/sk_humn_base_08_09fchr_hu01.glb",
+                                    "category":  "faces"
+                                },
+                                {
+                                    "id":  "sk_humn_base_09_09fchr_hu01",
+                                    "name":  "sk_humn_base_09_09fchr_hu01",
+                                    "url":  "synty/modular/faces/sk_humn_base_09_09fchr_hu01.glb",
+                                    "category":  "faces"
+                                },
+                                {
+                                    "id":  "sk_humn_base_10_09fchr_hu01",
+                                    "name":  "sk_humn_base_10_09fchr_hu01",
+                                    "url":  "synty/modular/faces/sk_humn_base_10_09fchr_hu01.glb",
+                                    "category":  "faces"
+                                },
+                                {
+                                    "id":  "sk_scfi_civl_09_23afac_hu01",
+                                    "name":  "sk_scfi_civl_09_23afac_hu01",
+                                    "url":  "synty/modular/faces/sk_scfi_civl_09_23afac_hu01.glb",
+                                    "category":  "faces"
+                                }
+                            ],
+                  "feet":  [
+                               {
+                                   "id":  "sk_fant_kngt_17_20fotl_hu01",
+                                   "name":  "sk_fant_kngt_17_20fotl_hu01",
+                                   "url":  "synty/modular/feet/sk_fant_kngt_17_20fotl_hu01.glb",
+                                   "category":  "feet"
+                               },
+                               {
+                                   "id":  "sk_fant_kngt_17_21fotr_hu01",
+                                   "name":  "sk_fant_kngt_17_21fotr_hu01",
+                                   "url":  "synty/modular/feet/sk_fant_kngt_17_21fotr_hu01.glb",
+                                   "category":  "feet"
+                               },
+                               {
+                                   "id":  "sk_humn_base_01_20fotl_hu01",
+                                   "name":  "sk_humn_base_01_20fotl_hu01",
+                                   "url":  "synty/modular/feet/sk_humn_base_01_20fotl_hu01.glb",
+                                   "category":  "feet"
+                               },
+                               {
+                                   "id":  "sk_humn_base_01_21fotr_hu01",
+                                   "name":  "sk_humn_base_01_21fotr_hu01",
+                                   "url":  "synty/modular/feet/sk_humn_base_01_21fotr_hu01.glb",
+                                   "category":  "feet"
+                               },
+                               {
+                                   "id":  "sk_scfi_civl_09_20fotl_hu01",
+                                   "name":  "sk_scfi_civl_09_20fotl_hu01",
+                                   "url":  "synty/modular/feet/sk_scfi_civl_09_20fotl_hu01.glb",
+                                   "category":  "feet"
+                               },
+                               {
+                                   "id":  "sk_scfi_civl_09_21fotr_hu01",
+                                   "name":  "sk_scfi_civl_09_21fotr_hu01",
+                                   "url":  "synty/modular/feet/sk_scfi_civl_09_21fotr_hu01.glb",
+                                   "category":  "feet"
+                               }
+                           ],
+                  "forearms":  [
+                                   {
+                                       "id":  "sk_fant_kngt_17_13alwl_hu01",
+                                       "name":  "sk_fant_kngt_17_13alwl_hu01",
+                                       "url":  "synty/modular/forearms/sk_fant_kngt_17_13alwl_hu01.glb",
+                                       "category":  "forearms"
+                                   },
+                                   {
+                                       "id":  "sk_fant_kngt_17_14alwr_hu01",
+                                       "name":  "sk_fant_kngt_17_14alwr_hu01",
+                                       "url":  "synty/modular/forearms/sk_fant_kngt_17_14alwr_hu01.glb",
+                                       "category":  "forearms"
+                                   },
+                                   {
+                                       "id":  "sk_humn_base_01_13alwl_hu01",
+                                       "name":  "sk_humn_base_01_13alwl_hu01",
+                                       "url":  "synty/modular/forearms/sk_humn_base_01_13alwl_hu01.glb",
+                                       "category":  "forearms"
+                                   },
+                                   {
+                                       "id":  "sk_humn_base_01_14alwr_hu01",
+                                       "name":  "sk_humn_base_01_14alwr_hu01",
+                                       "url":  "synty/modular/forearms/sk_humn_base_01_14alwr_hu01.glb",
+                                       "category":  "forearms"
+                                   },
+                                   {
+                                       "id":  "sk_scfi_civl_09_13alwl_hu01",
+                                       "name":  "sk_scfi_civl_09_13alwl_hu01",
+                                       "url":  "synty/modular/forearms/sk_scfi_civl_09_13alwl_hu01.glb",
+                                       "category":  "forearms"
+                                   },
+                                   {
+                                       "id":  "sk_scfi_civl_09_14alwr_hu01",
+                                       "name":  "sk_scfi_civl_09_14alwr_hu01",
+                                       "url":  "synty/modular/forearms/sk_scfi_civl_09_14alwr_hu01.glb",
+                                       "category":  "forearms"
+                                   }
+                               ],
+                  "hair":  [
+                               {
+                                   "id":  "sk_humn_base_01_02hair_hu01",
+                                   "name":  "sk_humn_base_01_02hair_hu01",
+                                   "url":  "synty/modular/hair/sk_humn_base_01_02hair_hu01.glb",
+                                   "category":  "hair"
+                               },
+                               {
+                                   "id":  "sk_humn_base_02_02hair_hu01",
+                                   "name":  "sk_humn_base_02_02hair_hu01",
+                                   "url":  "synty/modular/hair/sk_humn_base_02_02hair_hu01.glb",
+                                   "category":  "hair"
+                               },
+                               {
+                                   "id":  "sk_humn_base_03_02hair_hu01",
+                                   "name":  "sk_humn_base_03_02hair_hu01",
+                                   "url":  "synty/modular/hair/sk_humn_base_03_02hair_hu01.glb",
+                                   "category":  "hair"
+                               },
+                               {
+                                   "id":  "sk_humn_base_04_02hair_hu01",
+                                   "name":  "sk_humn_base_04_02hair_hu01",
+                                   "url":  "synty/modular/hair/sk_humn_base_04_02hair_hu01.glb",
+                                   "category":  "hair"
+                               },
+                               {
+                                   "id":  "sk_humn_base_05_02hair_hu01",
+                                   "name":  "sk_humn_base_05_02hair_hu01",
+                                   "url":  "synty/modular/hair/sk_humn_base_05_02hair_hu01.glb",
+                                   "category":  "hair"
+                               },
+                               {
+                                   "id":  "sk_humn_base_06_02hair_hu01",
+                                   "name":  "sk_humn_base_06_02hair_hu01",
+                                   "url":  "synty/modular/hair/sk_humn_base_06_02hair_hu01.glb",
+                                   "category":  "hair"
+                               },
+                               {
+                                   "id":  "sk_humn_base_07_02hair_hu01",
+                                   "name":  "sk_humn_base_07_02hair_hu01",
+                                   "url":  "synty/modular/hair/sk_humn_base_07_02hair_hu01.glb",
+                                   "category":  "hair"
+                               },
+                               {
+                                   "id":  "sk_humn_base_08_02hair_hu01",
+                                   "name":  "sk_humn_base_08_02hair_hu01",
+                                   "url":  "synty/modular/hair/sk_humn_base_08_02hair_hu01.glb",
+                                   "category":  "hair"
+                               },
+                               {
+                                   "id":  "sk_humn_base_09_02hair_hu01",
+                                   "name":  "sk_humn_base_09_02hair_hu01",
+                                   "url":  "synty/modular/hair/sk_humn_base_09_02hair_hu01.glb",
+                                   "category":  "hair"
+                               },
+                               {
+                                   "id":  "sk_humn_base_10_02hair_hu01",
+                                   "name":  "sk_humn_base_10_02hair_hu01",
+                                   "url":  "synty/modular/hair/sk_humn_base_10_02hair_hu01.glb",
+                                   "category":  "hair"
+                               },
+                               {
+                                   "id":  "sk_scfi_civl_09_02hair_hu01",
+                                   "name":  "sk_scfi_civl_09_02hair_hu01",
+                                   "url":  "synty/modular/hair/sk_scfi_civl_09_02hair_hu01.glb",
+                                   "category":  "hair"
+                               }
+                           ],
+                  "hands":  [
+                                {
+                                    "id":  "sk_fant_kngt_17_15hndl_hu01",
+                                    "name":  "sk_fant_kngt_17_15hndl_hu01",
+                                    "url":  "synty/modular/hands/sk_fant_kngt_17_15hndl_hu01.glb",
+                                    "category":  "hands"
+                                },
+                                {
+                                    "id":  "sk_fant_kngt_17_16hndr_hu01",
+                                    "name":  "sk_fant_kngt_17_16hndr_hu01",
+                                    "url":  "synty/modular/hands/sk_fant_kngt_17_16hndr_hu01.glb",
+                                    "category":  "hands"
+                                },
+                                {
+                                    "id":  "sk_humn_base_01_15hndl_hu01",
+                                    "name":  "sk_humn_base_01_15hndl_hu01",
+                                    "url":  "synty/modular/hands/sk_humn_base_01_15hndl_hu01.glb",
+                                    "category":  "hands"
+                                },
+                                {
+                                    "id":  "sk_humn_base_01_16hndr_hu01",
+                                    "name":  "sk_humn_base_01_16hndr_hu01",
+                                    "url":  "synty/modular/hands/sk_humn_base_01_16hndr_hu01.glb",
+                                    "category":  "hands"
+                                },
+                                {
+                                    "id":  "sk_scfi_civl_09_15hndl_hu01",
+                                    "name":  "sk_scfi_civl_09_15hndl_hu01",
+                                    "url":  "synty/modular/hands/sk_scfi_civl_09_15hndl_hu01.glb",
+                                    "category":  "hands"
+                                },
+                                {
+                                    "id":  "sk_scfi_civl_09_16hndr_hu01",
+                                    "name":  "sk_scfi_civl_09_16hndr_hu01",
+                                    "url":  "synty/modular/hands/sk_scfi_civl_09_16hndr_hu01.glb",
+                                    "category":  "hands"
+                                }
+                            ],
+                  "heads":  [
+                                {
+                                    "id":  "sk_humn_base_01_01head_hu01",
+                                    "name":  "sk_humn_base_01_01head_hu01",
+                                    "url":  "synty/modular/heads/sk_humn_base_01_01head_hu01.glb",
+                                    "category":  "heads"
+                                },
+                                {
+                                    "id":  "sk_humn_base_02_01head_hu01",
+                                    "name":  "sk_humn_base_02_01head_hu01",
+                                    "url":  "synty/modular/heads/sk_humn_base_02_01head_hu01.glb",
+                                    "category":  "heads"
+                                }
+                            ],
+                  "hips":  [
+                               {
+                                   "id":  "sk_fant_kngt_17_17hips_hu01",
+                                   "name":  "sk_fant_kngt_17_17hips_hu01",
+                                   "url":  "synty/modular/hips/sk_fant_kngt_17_17hips_hu01.glb",
+                                   "category":  "hips"
+                               },
+                               {
+                                   "id":  "sk_humn_base_01_17hips_hu01",
+                                   "name":  "sk_humn_base_01_17hips_hu01",
+                                   "url":  "synty/modular/hips/sk_humn_base_01_17hips_hu01.glb",
+                                   "category":  "hips"
+                               },
+                               {
+                                   "id":  "sk_scfi_civl_09_17hips_hu01",
+                                   "name":  "sk_scfi_civl_09_17hips_hu01",
+                                   "url":  "synty/modular/hips/sk_scfi_civl_09_17hips_hu01.glb",
+                                   "category":  "hips"
+                               }
+                           ],
+                  "legs":  [
+                               {
+                                   "id":  "sk_fant_kngt_17_18legl_hu01",
+                                   "name":  "sk_fant_kngt_17_18legl_hu01",
+                                   "url":  "synty/modular/legs/sk_fant_kngt_17_18legl_hu01.glb",
+                                   "category":  "legs"
+                               },
+                               {
+                                   "id":  "sk_fant_kngt_17_19legr_hu01",
+                                   "name":  "sk_fant_kngt_17_19legr_hu01",
+                                   "url":  "synty/modular/legs/sk_fant_kngt_17_19legr_hu01.glb",
+                                   "category":  "legs"
+                               },
+                               {
+                                   "id":  "sk_humn_base_01_18legl_hu01",
+                                   "name":  "sk_humn_base_01_18legl_hu01",
+                                   "url":  "synty/modular/legs/sk_humn_base_01_18legl_hu01.glb",
+                                   "category":  "legs"
+                               },
+                               {
+                                   "id":  "sk_humn_base_01_19legr_hu01",
+                                   "name":  "sk_humn_base_01_19legr_hu01",
+                                   "url":  "synty/modular/legs/sk_humn_base_01_19legr_hu01.glb",
+                                   "category":  "legs"
+                               },
+                               {
+                                   "id":  "sk_scfi_civl_09_18legl_hu01",
+                                   "name":  "sk_scfi_civl_09_18legl_hu01",
+                                   "url":  "synty/modular/legs/sk_scfi_civl_09_18legl_hu01.glb",
+                                   "category":  "legs"
+                               },
+                               {
+                                   "id":  "sk_scfi_civl_09_19legr_hu01",
+                                   "name":  "sk_scfi_civl_09_19legr_hu01",
+                                   "url":  "synty/modular/legs/sk_scfi_civl_09_19legr_hu01.glb",
+                                   "category":  "legs"
+                               }
+                           ],
+                  "noses":  [
+                                {
+                                    "id":  "sk_humn_base_01_35nose_hu01",
+                                    "name":  "sk_humn_base_01_35nose_hu01",
+                                    "url":  "synty/modular/noses/sk_humn_base_01_35nose_hu01.glb",
+                                    "category":  "noses"
+                                },
+                                {
+                                    "id":  "sk_humn_base_02_35nose_hu01",
+                                    "name":  "sk_humn_base_02_35nose_hu01",
+                                    "url":  "synty/modular/noses/sk_humn_base_02_35nose_hu01.glb",
+                                    "category":  "noses"
+                                },
+                                {
+                                    "id":  "sk_humn_base_03_35nose_hu01",
+                                    "name":  "sk_humn_base_03_35nose_hu01",
+                                    "url":  "synty/modular/noses/sk_humn_base_03_35nose_hu01.glb",
+                                    "category":  "noses"
+                                },
+                                {
+                                    "id":  "sk_humn_base_04_35nose_hu01",
+                                    "name":  "sk_humn_base_04_35nose_hu01",
+                                    "url":  "synty/modular/noses/sk_humn_base_04_35nose_hu01.glb",
+                                    "category":  "noses"
+                                },
+                                {
+                                    "id":  "sk_humn_base_05_35nose_hu01",
+                                    "name":  "sk_humn_base_05_35nose_hu01",
+                                    "url":  "synty/modular/noses/sk_humn_base_05_35nose_hu01.glb",
+                                    "category":  "noses"
+                                },
+                                {
+                                    "id":  "sk_humn_base_06_35nose_hu01",
+                                    "name":  "sk_humn_base_06_35nose_hu01",
+                                    "url":  "synty/modular/noses/sk_humn_base_06_35nose_hu01.glb",
+                                    "category":  "noses"
+                                },
+                                {
+                                    "id":  "sk_humn_base_07_35nose_hu01",
+                                    "name":  "sk_humn_base_07_35nose_hu01",
+                                    "url":  "synty/modular/noses/sk_humn_base_07_35nose_hu01.glb",
+                                    "category":  "noses"
+                                },
+                                {
+                                    "id":  "sk_humn_base_08_35nose_hu01",
+                                    "name":  "sk_humn_base_08_35nose_hu01",
+                                    "url":  "synty/modular/noses/sk_humn_base_08_35nose_hu01.glb",
+                                    "category":  "noses"
+                                },
+                                {
+                                    "id":  "sk_humn_base_09_35nose_hu01",
+                                    "name":  "sk_humn_base_09_35nose_hu01",
+                                    "url":  "synty/modular/noses/sk_humn_base_09_35nose_hu01.glb",
+                                    "category":  "noses"
+                                },
+                                {
+                                    "id":  "sk_humn_base_10_35nose_hu01",
+                                    "name":  "sk_humn_base_10_35nose_hu01",
+                                    "url":  "synty/modular/noses/sk_humn_base_10_35nose_hu01.glb",
+                                    "category":  "noses"
+                                },
+                                {
+                                    "id":  "sk_humn_base_11_35nose_hu01",
+                                    "name":  "sk_humn_base_11_35nose_hu01",
+                                    "url":  "synty/modular/noses/sk_humn_base_11_35nose_hu01.glb",
+                                    "category":  "noses"
+                                }
+                            ],
+                  "teeth":  [
+                                {
+                                    "id":  "sk_humn_base_01_36teth_hu01",
+                                    "name":  "sk_humn_base_01_36teth_hu01",
+                                    "url":  "synty/modular/teeth/sk_humn_base_01_36teth_hu01.glb",
+                                    "category":  "teeth"
+                                },
+                                {
+                                    "id":  "sk_humn_base_02_36teth_hu01",
+                                    "name":  "sk_humn_base_02_36teth_hu01",
+                                    "url":  "synty/modular/teeth/sk_humn_base_02_36teth_hu01.glb",
+                                    "category":  "teeth"
+                                },
+                                {
+                                    "id":  "sk_humn_base_03_36teth_hu01",
+                                    "name":  "sk_humn_base_03_36teth_hu01",
+                                    "url":  "synty/modular/teeth/sk_humn_base_03_36teth_hu01.glb",
+                                    "category":  "teeth"
+                                },
+                                {
+                                    "id":  "sk_humn_base_04_36teth_hu01",
+                                    "name":  "sk_humn_base_04_36teth_hu01",
+                                    "url":  "synty/modular/teeth/sk_humn_base_04_36teth_hu01.glb",
+                                    "category":  "teeth"
+                                },
+                                {
+                                    "id":  "sk_humn_base_05_36teth_hu01",
+                                    "name":  "sk_humn_base_05_36teth_hu01",
+                                    "url":  "synty/modular/teeth/sk_humn_base_05_36teth_hu01.glb",
+                                    "category":  "teeth"
+                                },
+                                {
+                                    "id":  "sk_humn_base_06_36teth_hu01",
+                                    "name":  "sk_humn_base_06_36teth_hu01",
+                                    "url":  "synty/modular/teeth/sk_humn_base_06_36teth_hu01.glb",
+                                    "category":  "teeth"
+                                },
+                                {
+                                    "id":  "sk_humn_base_07_36teth_hu01",
+                                    "name":  "sk_humn_base_07_36teth_hu01",
+                                    "url":  "synty/modular/teeth/sk_humn_base_07_36teth_hu01.glb",
+                                    "category":  "teeth"
+                                },
+                                {
+                                    "id":  "sk_humn_base_08_36teth_hu01",
+                                    "name":  "sk_humn_base_08_36teth_hu01",
+                                    "url":  "synty/modular/teeth/sk_humn_base_08_36teth_hu01.glb",
+                                    "category":  "teeth"
+                                },
+                                {
+                                    "id":  "sk_humn_base_09_36teth_hu01",
+                                    "name":  "sk_humn_base_09_36teth_hu01",
+                                    "url":  "synty/modular/teeth/sk_humn_base_09_36teth_hu01.glb",
+                                    "category":  "teeth"
+                                },
+                                {
+                                    "id":  "sk_humn_base_10_36teth_hu01",
+                                    "name":  "sk_humn_base_10_36teth_hu01",
+                                    "url":  "synty/modular/teeth/sk_humn_base_10_36teth_hu01.glb",
+                                    "category":  "teeth"
+                                }
+                            ],
+                  "tongue":  [
+                                 {
+                                     "id":  "sk_humn_base_01_37tong_hu01",
+                                     "name":  "sk_humn_base_01_37tong_hu01",
+                                     "url":  "synty/modular/tongue/sk_humn_base_01_37tong_hu01.glb",
+                                     "category":  "tongue"
+                                 }
+                             ],
+                  "torso":  [
+                                {
+                                    "id":  "sk_fant_kngt_17_10tors_hu01",
+                                    "name":  "sk_fant_kngt_17_10tors_hu01",
+                                    "url":  "synty/modular/torso/sk_fant_kngt_17_10tors_hu01.glb",
+                                    "category":  "torso"
+                                },
+                                {
+                                    "id":  "sk_humn_base_01_10tors_hu01",
+                                    "name":  "sk_humn_base_01_10tors_hu01",
+                                    "url":  "synty/modular/torso/sk_humn_base_01_10tors_hu01.glb",
+                                    "category":  "torso"
+                                },
+                                {
+                                    "id":  "sk_scfi_civl_09_10tors_hu01",
+                                    "name":  "sk_scfi_civl_09_10tors_hu01",
+                                    "url":  "synty/modular/torso/sk_scfi_civl_09_10tors_hu01.glb",
+                                    "category":  "torso"
+                                }
+                            ],
+                  "upperarms":  [
+                                    {
+                                        "id":  "sk_fant_kngt_17_11aupl_hu01",
+                                        "name":  "sk_fant_kngt_17_11aupl_hu01",
+                                        "url":  "synty/modular/upperarms/sk_fant_kngt_17_11aupl_hu01.glb",
+                                        "category":  "upperarms"
+                                    },
+                                    {
+                                        "id":  "sk_fant_kngt_17_12aupr_hu01",
+                                        "name":  "sk_fant_kngt_17_12aupr_hu01",
+                                        "url":  "synty/modular/upperarms/sk_fant_kngt_17_12aupr_hu01.glb",
+                                        "category":  "upperarms"
+                                    },
+                                    {
+                                        "id":  "sk_humn_base_01_11aupl_hu01",
+                                        "name":  "sk_humn_base_01_11aupl_hu01",
+                                        "url":  "synty/modular/upperarms/sk_humn_base_01_11aupl_hu01.glb",
+                                        "category":  "upperarms"
+                                    },
+                                    {
+                                        "id":  "sk_humn_base_01_12aupr_hu01",
+                                        "name":  "sk_humn_base_01_12aupr_hu01",
+                                        "url":  "synty/modular/upperarms/sk_humn_base_01_12aupr_hu01.glb",
+                                        "category":  "upperarms"
+                                    },
+                                    {
+                                        "id":  "sk_scfi_civl_09_11aupl_hu01",
+                                        "name":  "sk_scfi_civl_09_11aupl_hu01",
+                                        "url":  "synty/modular/upperarms/sk_scfi_civl_09_11aupl_hu01.glb",
+                                        "category":  "upperarms"
+                                    },
+                                    {
+                                        "id":  "sk_scfi_civl_09_12aupr_hu01",
+                                        "name":  "sk_scfi_civl_09_12aupr_hu01",
+                                        "url":  "synty/modular/upperarms/sk_scfi_civl_09_12aupr_hu01.glb",
+                                        "category":  "upperarms"
+                                    }
+                                ]
+              }
+}

@@ -53,6 +53,11 @@ class AdminController {
     public static function manageEmployee() {
         requireAuth();
         requireRole('admin');
+        if (!verifyCsrf($_GET['csrf'] ?? '')) {
+            $_SESSION['flash_error'] = 'Token CSRF invalide.';
+            header('Location: /index.php?action=admin-dashboard');
+            exit;
+        }
         $id = intval($_GET['id'] ?? 0);
         $actionType = $_GET['type'] ?? '';
 
@@ -71,7 +76,7 @@ class AdminController {
                 $newPassword = bin2hex(random_bytes(8)) . 'A1!';
                 User::updatePassword($employee['email'], $newPassword);
                 require_once __DIR__ . '/../helpers/MailHelper.php';
-                MailHelper::send($employee['email'], 'Nouveau mot de passe', "Votre nouveau mot de passe est : $newPassword");
+                MailHelper::send($employee['email'], 'Nouveau mot de passe', "Nouveau mot de passe temporaire : $newPassword");
                 Log::add('employee_password_reset', ['employee_id' => $id]);
             }
         }

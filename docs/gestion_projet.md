@@ -2,102 +2,129 @@
 
 ## Methodologie
 
-Ce projet a ete realise selon une approche inspiree de la methode **Agile / Scrum**, adaptee a un developpement individuel en formation.
+Le projet a ete mene selon une logique Agile / Scrum adaptee a un travail individuel. La demarche retenue consistait a avancer par blocs fonctionnels courts, avec une verification reguliere des parcours principaux, des arbitrages techniques et des livrables.
+
+Le suivi a ete centralise dans un board Trello reconstituable a partir du JSON de projet, qui fusionne :
+
+- les cartes historiques de production ;
+- les cartes de blocage et d'arbitrage ;
+- les cartes de verification finale ;
+- les cartes de livrables.
 
 ## Planification
 
-### Sprint 0 : Analyse et conception (1-2 jours)
-- Lecture du cahier des charges et extraction des besoins fonctionnels
-- Definition de l'architecture technique (stack PHP/MySQL/MongoDB)
-- Creation du MCD et des diagrammes UML
-- Choix de la charte graphique et creation des wireframes
+### Sprint 0 - Analyse et conception
 
-### Sprint 1 : Mise en place technique (1 jour)
-- Creation de la structure de dossiers
-- Configuration de la base de donnees relationnelle (MySQL)
-- Mise en place du routeur PHP et des templates
-- Configuration des sessions et securite de base (CSRF, bcrypt)
+- lecture de l'enonce ;
+- extraction des besoins fonctionnels ;
+- creation du MCD et des diagrammes UML ;
+- definition de la charte graphique et des wireframes.
 
-### Sprint 2 : Authentification et roles (2 jours)
-- Developpement de l'inscription et de la connexion
-- Gestion des roles (Utilisateur, Employe, Administrateur)
-- Securisation des routes et controle d'acces
-- Creation des donnees de test (fixtures SQL)
+### Sprint 1 - Mise en place technique
 
-### Sprint 3 : Gestion des personnages (3-4 jours)
-- CRUD des personnages (creation, modification, suppression logique)
-- Systeme de filtrage et pagination
-- Page de detail avec avatar builder
-- Visualisation en temps reel des traits
+- structure MVC ;
+- configuration de la base relationnelle et de MongoDB ;
+- sessions et securite de base ;
+- premiers ecrans publics.
 
-### Sprint 4 : Avatar builder et personnalisation (2-3 jours)
-- Systeme de superposition par couches (z-index)
-- Adaptation a la corpulence (transform: scale)
-- Color picker pour la peau
-- Positionnement dynamique des traits du visage
+### Sprint 2 - Authentification et roles
 
-### Sprint 5 : Inventaire et objets (2 jours)
-- Gestion de l'inventaire par personnage
-- Equipement d'armes et armures
-- Calcul des bonus statistiques
+- inscription et connexion ;
+- mot de passe oublie ;
+- gestion des roles joueur / employe / administrateur ;
+- premiers controles d'acces.
 
-### Sprint 6 : Espace administrateur (2 jours)
-- Tableau de bord statistique
-- Moderation des comptes (valider, suspendre)
-- Gestion des droits utilisateurs (promotion/retrogradation)
+### Sprint 3 - Gestion des personnages
 
-### Sprint 7 : Front-end et responsive (2 jours)
-- Integration Bootstrap 5
-- Affichage responsive mobile/tablette/desktop
-- Polishing UX (alertes, loaders, etats vides)
+- creation de personnage ;
+- edition, duplication, suppression ;
+- detail public ;
+- partage apres validation.
 
-### Sprint 8 : Documentation et deploiement (2 jours)
-- Redaction du README et documentation technique
-- Creation de la charte graphique et du manuel d'utilisation
-- Preparation du depot Git avec branches main/develop
-- Tests finaux et deploiement Railway
+### Sprint 4 - Moderation et administration
 
-## Gestion des versions (Git)
+- validation ou rejet des personnages ;
+- validation des avis ;
+- gestion des accessoires ;
+- creation et gestion des comptes employe ;
+- consultation des logs administratifs.
 
+### Sprint 5 - Recherche sur les pipelines avatar
+
+- test du pack Quaternius ;
+- test de Universal LPC ;
+- test d'une version 2D a base d'images superposees ;
+- comparaison avec le flux Synty Sidekick.
+
+### Sprint 6 - Viewer 3D et ambiance
+
+- integration Three.js ;
+- createur modulaire par etapes ;
+- presets de classe et variantes d'equipement ;
+- integration du decor `Fantasy Forest Environment - Free Sample`.
+
+### Sprint 7 - Animation de marche
+
+- import de `Human Basic Motions FREE` dans Unity ;
+- tests de marche sur les bodies et les prefabs complets ;
+- essais de bake et d'export pour le web ;
+- retour a un viewer stable sans marche exportee.
+
+### Sprint 8 - Stabilisation et livraison
+
+- nettoyage du depot ;
+- fusion du SQL en un fichier unique ;
+- harmonisation du board Trello ;
+- regeneration des visuels et des PDF ;
+- verification finale des livrables.
+
+### Date de cloture
+
+Pour la restitution finale, les cartes de synthese `Sprint 0` a `Sprint 9` sont harmonisees avec une date de fin au `21 mai 2026`.
+
+## Gestion des versions
+
+```text
+main        : branche stable
+develop     : integration
+feature/*   : une branche par fonctionnalite
 ```
-main        : branche de production, stable
-develop     : branche d'integration, tests en cours
-feature/*   : une branche par fonctionnalite (ex: feature/avatar, feature/auth)
-```
 
-Flux de travail :
-1. Creation d'une branche `feature/nom` depuis `develop`
-2. Developpement et commits reguliers
-3. Merge de `feature/nom` vers `develop` apres tests locaux
-4. Merge de `develop` vers `main` une fois le sprint valide
+Le flux de travail retenu est le suivant :
+
+1. creation d'une branche `feature/nom` depuis `develop` ;
+2. developpement et tests locaux ;
+3. merge vers `develop` apres validation ;
+4. merge vers `main` en fin de cycle.
 
 ## Livrables
 
 | Livrable | Statut | Emplacement |
 |----------|--------|-------------|
-| Code source | ✅ | Depot GitHub |
-| Fichiers SQL | ✅ | `/database/pixelverse.sql` |
-| README.md | ✅ | `/README.md` |
-| Charte graphique | ✅ | `/docs/charte_graphique.html` |
-| Manuel d'utilisation | ✅ | `/docs/manuel_utilisation.html` |
-| Documentation technique | ✅ | `/docs/documentation_technique.md` |
-| Documentation gestion projet | ✅ | `/docs/gestion_projet.md` |
-| Guide deploiement Railway | ✅ | `/docs/GUIDE_DEPLOIEMENT_RAILWAY.md` |
-| Application deployee | ⏳ | A configurer par l'utilisateur |
+| Code source | OK | Depot Git |
+| SQL unifie | OK | `database/pixelverse.sql` |
+| README | OK | `README.md` |
+| Charte graphique PDF | OK | `docs/charte_graphique.pdf` |
+| Manuel d'utilisation PDF | OK | `docs/manuel_utilisation.pdf` |
+| Wireframes et mockups | OK | `docs/maquettes/` |
+| Diagrammes MCD / UML | OK | `docs/diagramme_mcd.png`, `docs/diagramme_utilisation.png`, `docs/diagramme_sequence.png` |
+| Documentation technique | OK | `docs/documentation_technique.md` et `docs/documentation_technique.pdf` |
+| Documentation gestion projet | OK | `docs/gestion_projet.md` et `docs/gestion_projet.pdf` |
+| Copie a rendre | OK | `copie-a-rendre-pixeverse.md` et `copie-a-rendre-pixeverse.docx` |
+| Application deployee | A completer | URL publique a renseigner |
 
-## Bilan et axes d'amelioration
+## Bilan
 
-**Points forts :**
-- Architecture claire et maintenable
-- Securite renforcee (CSRF, PDO, XSS)
-- Responsive design
-- Separation des roles bien definie
-- Systeme d'avatar innovant par couches
+### Points forts
 
-**Ameliorations futures :**
-- Integration complete de MongoDB pour les logs temps reel
-- API REST complete pour une future application mobile
-- Systeme de notifications email (SendGrid/Mailgun)
-- Upload d'images personnalisees pour les avatars
-- Tests unitaires (PHPUnit)
-- Multi-langue (i18n)
+- createur 3D modulaire stable ;
+- separation plus nette entre structure PHP et logique JavaScript ;
+- moderation et administration completes ;
+- journalisation MongoDB exploitable ;
+- livrables visuels et documentaires coherents.
+
+### Axes d'amelioration
+
+- pipeline d'export web anime a reprendre avec plus de temps ;
+- extension du catalogue d'armes et d'accessoires ;
+- industrialisation plus poussee du pont Unity / web si une version post-ECF etait poursuivie.

@@ -1,0 +1,13 @@
+{
+  "engine": "synty-presets",
+  "version": "v31-saved-presets",
+  "baseUrl": "assets/models/",
+  "presets": [
+    { "id": "female_body_02", "name": "female_body_02", "url": "synty/presets/female_body_02.glb", "source": "Assets/PixelVerseExports/SyntyPresets/female_body_02/female_body_02.prefab" },
+    { "id": "female_muscular_01", "name": "female_muscular_01", "url": "synty/presets/female_muscular_01.glb", "source": "Assets/PixelVerseExports/SyntyPresets/female_muscular_01/female_muscular_01.prefab" },
+    { "id": "female_muscular_02", "name": "female_muscular_02", "url": "synty/presets/female_muscular_02.glb", "source": "Assets/PixelVerseExports/SyntyPresets/female_muscular_02/female_muscular_02.prefab" },
+    { "id": "female_muscularl_01", "name": "female_muscularl_01", "url": "synty/presets/female_muscularl_01.glb", "source": "Assets/PixelVerseExports/SyntyPresets/female_muscularl_01/female_muscularl_01.prefab" },
+    { "id": "male_body_04", "name": "male_body_04", "url": "synty/presets/male_body_04.glb", "source": "Assets/PixelVerseExports/SyntyPresets/male_body_04/male_body_04.prefab" },
+    { "id": "male_muscular_01", "name": "male_muscular_01", "url": "synty/presets/male_muscular_01.glb", "source": "Assets/PixelVerseExports/SyntyPresets/male_muscular_01/male_muscular_01.prefab" }
+  ]
+}

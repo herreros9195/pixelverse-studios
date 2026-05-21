@@ -1,5 +1,7 @@
 <?php
 require_once __DIR__ . '/../models/Contact.php';
+require_once __DIR__ . '/../models/User.php';
+require_once __DIR__ . '/../models/Log.php';
 
 class HomeController {
     public static function index() {
@@ -11,7 +13,7 @@ class HomeController {
         $error = '';
         $success = '';
 
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if (isPostRequest()) {
             if (!verifyCsrf($_POST['csrf_token'] ?? '')) {
                 $error = 'Token CSRF invalide.';
             } else {
@@ -24,15 +26,13 @@ class HomeController {
                 } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                     $error = 'Adresse email invalide.';
                 } elseif (!User::findByPseudo($pseudo)) {
-                    $error = 'Le pseudo mentionné n\'existe pas dans notre base.';
+                    $error = 'Le pseudo indique ne correspond a aucun compte.';
                 } else {
                     Contact::create($email, $pseudo, $message);
-                    $to = 'contact@pixelverse.com';
-                    $subject = 'Nouvelle demande de contact de ' . $pseudo;
-                    $headers = "From: " . $email . "\r\nContent-Type: text/plain; charset=utf-8";
                     require_once __DIR__ . '/../helpers/MailHelper.php';
-                    MailHelper::send($to, $subject, $message);
-                    $success = 'Votre message a bien été envoyé.';
+                    MailHelper::send('contact@pixelverse.com', 'Nouvelle demande de contact de ' . $pseudo, $message, $email);
+                    Log::add('contact_request', ['email' => $email, 'pseudo' => $pseudo]);
+                    $success = 'Message envoye avec succes.';
                 }
             }
         }
@@ -42,8 +42,13 @@ class HomeController {
     }
 
     public static function legal() {
-        $pageTitle = 'Mentions Légales - PixelVerse Studios';
+        $pageTitle = 'Mentions Legales - PixelVerse Studios';
         require __DIR__ . '/../views/home/legal.php';
+    }
+
+    public static function privacy() {
+        $pageTitle = 'Confidentialite - PixelVerse Studios';
+        require __DIR__ . '/../views/home/privacy.php';
     }
 
     public static function cgv() {

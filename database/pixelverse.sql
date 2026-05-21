@@ -1,6 +1,6 @@
 -- ==============================================
--- Base de données : pixelverse
--- Système de Gestion de Personnages
+-- Base de donnees : pixelverse
+-- Systeme de Gestion de Personnages
 -- FantasyRealm Online - PixelVerse Studios
 -- ==============================================
 
@@ -15,6 +15,8 @@ CREATE TABLE users (
     email VARCHAR(255) NOT NULL UNIQUE,
     pseudo VARCHAR(100) NOT NULL UNIQUE,
     password_hash VARCHAR(255) NOT NULL,
+    password_reset_token VARCHAR(128) DEFAULT NULL,
+    password_reset_expires_at DATETIME DEFAULT NULL,
     role ENUM('user','employee','admin') DEFAULT 'user',
     status ENUM('active','suspended','deleted') DEFAULT 'active',
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
@@ -41,16 +43,18 @@ CREATE TABLE characters (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
     name VARCHAR(100) NOT NULL UNIQUE,
-    gender ENUM('male','female','other') NOT NULL,
+    gender ENUM('male','female') NOT NULL,
+    body_style VARCHAR(50),
+    ear_shape VARCHAR(50),
     eye_shape VARCHAR(50),
     nose_shape VARCHAR(50),
     mouth_shape VARCHAR(50),
     skin_color VARCHAR(50),
+    hair_style VARCHAR(50),
     hair_color VARCHAR(50),
     eye_color VARCHAR(50),
     character_type VARCHAR(50),
-    build VARCHAR(50),
-    age_group VARCHAR(50),
+    outfit_variant VARCHAR(50) DEFAULT NULL,
     status ENUM('pending','approved','rejected') DEFAULT 'pending',
     shared TINYINT(1) DEFAULT 0,
     rejection_reason TEXT,
@@ -98,38 +102,64 @@ CREATE TABLE contact_requests (
 ) ENGINE=InnoDB;
 
 -- ----------------------------------------------
--- Insertion des données de test
+-- Insertion des donnees de test
 -- ----------------------------------------------
 
--- Administrateur par défaut (mot de passe : Admin@123)
 INSERT INTO users (email, pseudo, password_hash, role, status) VALUES
 ('admin@pixelverse.com', 'admin', '$2y$10$LzaYNiklZYn6GTHRsfhoVuXutd9C4/tip9BF0Ga.JHJyann6/Z.Yy', 'admin', 'active');
 
--- Employé de test (mot de passe : Employee@123)
 INSERT INTO users (email, pseudo, password_hash, role, status) VALUES
 ('employee@pixelverse.com', 'employee', '$2y$10$.h91DYHZCljkBx7MRC3tsu5.a0l/A/bciXS3K.4SpVTNE9fKhjrby', 'employee', 'active');
 
--- Utilisateur de test (mot de passe : User@123)
 INSERT INTO users (email, pseudo, password_hash, role, status) VALUES
 ('user@pixelverse.com', 'player1', '$2y$10$a9sJEq9dCoDSDUMUVmPhL.hGiZ2QU9PZ7yk41D8jfZmLNAmJPKLHa', 'user', 'active');
 
--- Accessoires de base
 INSERT INTO accessories (name, type, description, status) VALUES
-('Épée de fer', 'weapon', 'Une épée robuste pour les débutants.', 'available'),
-('Bouclier en bois', 'armor', 'Protection légère mais efficace.', 'available'),
-('Cape rouge', 'clothing', 'Une cape élégante qui attire tous les regards.', 'available'),
-('Amulette de pouvoir', 'accessory', 'Augmente légèrement la magie.', 'available'),
-('Hache de guerre', 'weapon', 'Arme dévastatrice pour les guerriers.', 'available'),
-('Plastron d\'acier', 'armor', 'Armure lourde offrant une grande protection.', 'available');
+('Epee de fer', 'weapon', 'Une epee robuste pour les debutants.', 'available'),
+('Bouclier en bois', 'armor', 'Protection legere mais efficace.', 'available'),
+('Cape rouge', 'clothing', 'Une cape elegante qui attire tous les regards.', 'available'),
+('Amulette de pouvoir', 'accessory', 'Augmente legerement la magie.', 'available'),
+('Hache de guerre', 'weapon', 'Arme devastatrice pour les guerriers.', 'available'),
+('Plastron d''acier', 'armor', 'Armure lourde offrant une grande protection.', 'available');
 
--- Personnage de test
-INSERT INTO characters (user_id, name, gender, eye_shape, nose_shape, mouth_shape, skin_color, hair_color, eye_color, character_type, build, age_group, status, shared) VALUES
-(3, 'Thalor', 'male', 'Amande', 'Droit', 'Fine', 'Claire', 'Brun', 'Vert', 'Guerrier', 'Musclé', 'Adulte', 'approved', 1);
+INSERT INTO characters (
+    user_id,
+    name,
+    gender,
+    body_style,
+    ear_shape,
+    eye_shape,
+    nose_shape,
+    mouth_shape,
+    skin_color,
+    hair_style,
+    hair_color,
+    eye_color,
+    character_type,
+    outfit_variant,
+    status,
+    shared
+) VALUES (
+    3,
+    'Thalor',
+    'male',
+    'body_04',
+    'ear_01',
+    'brow_03',
+    'nose_06',
+    'face_none',
+    'Claire',
+    'hair_02',
+    'Brun',
+    'Vert',
+    'Guerrier',
+    'warrior_full',
+    'approved',
+    1
+);
 
--- Associer des accessoires au personnage
 INSERT INTO character_accessories (character_id, accessory_id) VALUES
 (1, 1), (1, 3);
 
--- Avis de test
 INSERT INTO reviews (character_id, user_id, rating, comment, status) VALUES
-(1, 3, 5, 'Personnage très bien construit, j\'adore les détails !', 'approved');
+(1, 3, 5, 'Personnage tres bien construit, j''adore les details !', 'approved');
