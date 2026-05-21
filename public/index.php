@@ -1,4 +1,5 @@
 <?php
+ob_start();
 /**
  * Point d'entree unique de l'application (Front Controller)
  */
